@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import UserList from '@components/UserList'
+import UserList from '@modules/UserList'
 
 import '@assets/css/default.scss'
 

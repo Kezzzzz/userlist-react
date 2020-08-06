@@ -86,6 +86,7 @@ module.exports = {
     alias: {
       '@root': resolve(),
       '@components': resolve('src/components'),
+      '@modules': resolve('src/modules'),
       '@hooks': resolve('src/hooks'),
       '@assets': resolve('src/assets'),
     },

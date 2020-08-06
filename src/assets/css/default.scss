@@ -27,3 +27,15 @@ h1 {
     font-size: $font-size-h4;
   }
 }
+
+h2 {
+  font-size: $font-size-h2;
+
+  @include breakpoint(0, $tablet) {
+    font-size: $font-size-h4;
+  }
+
+  @include breakpoint(0, $phablet) {
+    font-size: $font-size-h5;
+  }
+}

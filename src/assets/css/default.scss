@@ -1,0 +1,29 @@
+/*
+    Base SCSS variables & mixins
+*/
+
+@import 'base/variables.scss';
+@import 'base/breakpoints.scss';
+@import 'base/mixins.scss';
+
+//Global SCSS
+
+html,
+body {
+  font-family: $font-family-base;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: scroll;
+}
+
+h1 {
+  font-size: $font-size-h1;
+
+  @include breakpoint(0, $tablet) {
+    font-size: $font-size-h3;
+  }
+
+  @include breakpoint(0, $phablet) {
+    font-size: $font-size-h4;
+  }
+}

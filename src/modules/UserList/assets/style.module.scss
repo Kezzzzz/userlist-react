@@ -1,0 +1,35 @@
+@import '@assets/css/base/variables';
+@import '@assets/css/base/breakpoints';
+@import '@assets/css/base/mixins';
+
+.card {
+  background-color: $white-grey;
+  @include border-radius(pxtorem(5));
+  @include box-shadow(pxtorem(1) pxtorem(1) pxtorem(10) pxtorem(-5) $black);
+  transition: 200ms all;
+
+  @include breakpoint(0, $bs-sm) {
+    min-width: pxtorem(400);
+  }
+
+  @include breakpoint($bs-sm, $bs-lg) {
+    min-width: pxtorem(500);
+  }
+
+  @include breakpoint($bs-lg, 0) {
+    min-width: pxtorem(700);
+  }
+
+  &.-padding {
+    padding-left: pxtorem(20);
+    padding-right: pxtorem(20);
+  }
+
+  &.-margin {
+    margin-bottom: pxtorem(35);
+  }
+
+  &:hover {
+    @include box-shadow(pxtorem(1) pxtorem(1) pxtorem(30) pxtorem(-5) $black);
+  }
+}

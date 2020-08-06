@@ -1,11 +1,19 @@
+/* eslint-disable react/prop-types */
 import React from 'react'
+import style from '../assets/style.module.scss'
 
-const UserListView = () => {
+const UserListView = ({ userData }) => {
+  console.log('userData: ', userData)
   return (
-    <>
-      <h1>Hello World! H1</h1>
-      <h2>Hello World! H2</h2>
-    </>
+    <div className="container">
+      {userData.map((item) => (
+        <div
+          className={`${style.card} ${style['-padding']} ${style['-margin']}`}
+        >
+          <h4>{item.name}</h4>
+        </div>
+      ))}
+    </div>
   )
 }
 

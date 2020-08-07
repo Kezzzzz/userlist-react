@@ -9,20 +9,21 @@ const UserListView = ({ userData }) => {
   return (
     <div className="container">
       {userData.map((item) => (
-        <div
-          className={`${style.card} ${style['-padding']} ${style['-margin']}`}
-        >
-          <div className={style.card__header}>
+        <div className={`${style.card} ${style['-margin']}`}>
+          <div className={`${style.card__header} ${style.h_padding}`}>
             <h5>{item.name}</h5>
           </div>
-          <div className={style.card__body}>
+          <div
+            className={`${style.card__body} ${style.h_padding}
+          ${style.v_padding}`}
+          >
             <div className={style.card__body__text}>
               <TextValue label="Username" value={item.username} />
               <TextValue label="Email" value={item.email} />
               <TextValue label="Phone" value={item.phone} />
               <TextValue label="Website" value={item.website} />
             </div>
-            <h6>Address</h6>
+            <h6 className={style.v_padding}>Address</h6>
             <div className={style.card__body__text}>
               <TextValue label="Suite" value={item.address.suite} />
               <TextValue label="Street" value={item.address.street} />
@@ -36,6 +37,12 @@ const UserListView = ({ userData }) => {
                   openInGoogleMaps(item.address.geo.lat, item.address.geo.lng)
                 }
               />
+            </div>
+            <h6 className={style.v_padding}>Company</h6>
+            <div className={style.card__body__text}>
+              <TextValue label="Name" value={item.company.name} />
+              <TextValue label="Catchphrase" value={item.company.catchPhrase} />
+              <TextValue label="Bs" value={item.company.bs} />
             </div>
           </div>
         </div>

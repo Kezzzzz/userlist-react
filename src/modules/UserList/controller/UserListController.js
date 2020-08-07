@@ -5,6 +5,7 @@ import UserListView from '../view/UserListView'
 
 const UserListController = () => {
   const [userData, setUserData] = useState([])
+
   const { data, handleRequest, isFetching, success } = useRequest(
     UsersAPI.getUsers
   )

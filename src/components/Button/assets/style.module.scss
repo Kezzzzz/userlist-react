@@ -3,7 +3,6 @@
 @import '@assets/css/base/mixins';
 
 .button {
-  background-color: $black;
   color: $white;
   padding-left: pxtorem(30);
   padding-right: pxtorem(30);
@@ -12,9 +11,20 @@
   font-size: pxtorem(18);
   border: 0;
   @include border-radius(pxtorem(5));
-  transition: 300ms all ease;
+
+  background: $black;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 50%,
+    $teal 50%,
+    $teal
+  );
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all 0.25s ease-in;
 
   &:hover {
-    background-color: $teal;
+    background-position: 0 0;
   }
 }

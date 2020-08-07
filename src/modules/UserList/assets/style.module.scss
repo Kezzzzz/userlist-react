@@ -38,6 +38,16 @@
     @include box-shadow(pxtorem(1) pxtorem(1) pxtorem(30) pxtorem(-5) $black);
   }
 
+  &__header {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background-color: $teal;
+    color: $white;
+    padding-top: pxtorem(20);
+    padding-bottom: pxtorem(20);
+    border-bottom: 2px solid $dark-teal;
+  }
+
   &__body {
     max-width: 100%;
     display: block;
@@ -69,4 +79,14 @@
       justify-content: center;
     }
   }
+}
+
+.h_padding {
+  padding-left: pxtorem(20);
+  padding-right: pxtorem(20);
+}
+
+.v_padding {
+  padding-top: pxtorem(20);
+  padding-bottom: pxtorem(20);
 }

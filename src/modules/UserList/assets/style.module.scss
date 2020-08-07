@@ -7,17 +7,18 @@
   @include border-radius(pxtorem(5));
   @include box-shadow(pxtorem(1) pxtorem(1) pxtorem(10) pxtorem(-5) $black);
   transition: 200ms all;
+  width: 100%;
 
   @include breakpoint(0, $bs-sm) {
-    min-width: pxtorem(400);
+    max-width: pxtorem(400);
   }
 
   @include breakpoint($bs-sm, $bs-lg) {
-    min-width: pxtorem(500);
+    max-width: pxtorem(500);
   }
 
   @include breakpoint($bs-lg, 0) {
-    min-width: pxtorem(700);
+    max-width: pxtorem(700);
   }
 
   &.-padding {
@@ -27,9 +28,45 @@
 
   &.-margin {
     margin-bottom: pxtorem(35);
+
+    @include breakpoint(0, $bs-sm) {
+      margin-bottom: pxtorem(20);
+    }
   }
 
   &:hover {
     @include box-shadow(pxtorem(1) pxtorem(1) pxtorem(30) pxtorem(-5) $black);
+  }
+
+  &__body {
+    max-width: 100%;
+    display: block;
+    padding-top: pxtorem(10);
+    padding-bottom: pxtorem(20);
+
+    &__text {
+      column-count: 2;
+      border-bottom: 0;
+      padding-bottom: pxtorem(20);
+
+      @include breakpoint(0, $bs-lg) {
+        column-count: 1;
+      }
+
+      @include breakpoint(0, $bs-lg) {
+        padding-bottom: pxtorem(15);
+      }
+
+      &:not(:nth-of-type(2)) {
+        border-bottom: 1px solid $teal;
+      }
+    }
+
+    &__action {
+      border-bottom: 1px solid $teal;
+      padding-bottom: pxtorem(20);
+      display: flex;
+      justify-content: center;
+    }
   }
 }

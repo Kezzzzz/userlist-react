@@ -8,6 +8,17 @@
 
 //Global SCSS
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: pxtorem(20);
+  margin-bottom: pxtorem(20);
+  font-weight: 700;
+}
+
 html,
 body {
   font-family: $font-family-base;
@@ -15,7 +26,7 @@ body {
   min-height: 100vh;
   overflow: scroll;
   color: $charcoal-grey;
-  background-color: $dark-grey;
+  background-color: $normal-grey;
 }
 
 h1 {
@@ -39,6 +50,64 @@ h2 {
 
   @include breakpoint(0, $phablet) {
     font-size: $font-size-h5;
+  }
+}
+
+h3 {
+  font-size: $font-size-h3;
+
+  @include breakpoint(0, $tablet) {
+    font-size: $font-size-h4;
+  }
+
+  @include breakpoint(0, $phablet) {
+    font-size: $font-size-h5;
+  }
+}
+
+h4 {
+  font-size: $font-size-h4;
+
+  @include breakpoint(0, $tablet) {
+    font-size: $font-size-h5;
+  }
+
+  @include breakpoint(0, $phablet) {
+    font-size: $font-size-h6;
+  }
+}
+
+h5 {
+  font-size: $font-size-h5;
+  @include breakpoint(0, $tablet) {
+    font-size: $font-size-h6;
+  }
+
+  @include breakpoint(0, $phablet) {
+    font-size: pxtorem(24);
+  }
+}
+
+h6 {
+  font-size: $font-size-h6;
+
+  @include breakpoint(0, $tablet) {
+    font-size: pxtorem(24);
+  }
+
+  @include breakpoint(0, $phablet) {
+    font-size: pxtorem(20);
+  }
+}
+
+button {
+  font-family: $font-family-base;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+
+  &:hover {
+    cursor: pointer;
   }
 }
 

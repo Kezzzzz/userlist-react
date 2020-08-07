@@ -12,10 +12,7 @@ const UserListController = () => {
   useEffect(() => {
     // here I would usually replace `!Object.keys(data).length` with lodash `!_.isEmpty(data)`.
     if (!isFetching && success && Object.keys(data).length) {
-      console.log('here')
       setUserData(data)
-    } else if (!isFetching && !success && !Object.keys(data).length) {
-      alert('Error fetching data')
     }
   }, [isFetching])
 

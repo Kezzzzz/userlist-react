@@ -1,0 +1,19 @@
+@import '@assets/css/base/variables';
+@import '@assets/css/base/breakpoints';
+@import '@assets/css/base/mixins';
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0;
+
+  &:not(:last-child) {
+    margin-bottom: pxtorem(10);
+  }
+}
+
+.label {
+  font-weight: 700;
+  text-transform: uppercase;
+}

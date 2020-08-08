@@ -11,19 +11,21 @@ const UserListView = ({
   searchValue,
   setSearchValue,
   handleSearch,
+  clearSearchValue,
 }) => {
   return (
     <div className="container">
       <Search
         value={searchValue}
-        setValue={setSearchValue}
+        setSearchValue={setSearchValue}
+        clearSearchValue={clearSearchValue}
         searchPlaceholder="Search Here"
         handleSearch={handleSearch}
-        searchBtnLabel="Search"
+        clearBtnLabel="Clear"
       />
       <br />
       {userData.length === 0 ? (
-        <div>no data found</div>
+        <h5>No result(s) for &quot;{searchValue}&quot;</h5>
       ) : (
         userData.map((item) => (
           <div className={`${style.card} ${style['-margin']}`}>
@@ -56,7 +58,9 @@ const UserListView = ({
                 />
               </div>
               <h6 className={style.v_padding}>Company</h6>
-              <div className={style.card__body__text}>
+              <div
+                className={`${style.card__body__text} ${style['-singleCol']}`}
+              >
                 <TextValue label="Name" value={item.company.name} />
                 <TextValue
                   label="Catchphrase"

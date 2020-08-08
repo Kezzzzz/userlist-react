@@ -1,0 +1,150 @@
+@import '@assets/css/base/variables';
+@import '@assets/css/base/breakpoints';
+@import '@assets/css/base/mixins';
+
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  @include border-radius(pxtorem(8));
+  @include box-shadow(
+    pxtorem(0) pxtorem(4) pxtorem(10) pxtorem(-2) $normal-grey
+  );
+}
+
+.searchBar {
+  outline: none;
+  border: 1px solid $dark-teal;
+  border-right: 0;
+  min-width: pxtorem(300);
+  min-height: pxtorem(40);
+  font-family: $font-family-base;
+  font-size: $font-size-small;
+  padding-left: pxtorem(10);
+  border-top-left-radius: pxtorem(8);
+  border-bottom-left-radius: pxtorem(8);
+  transition: all 0.2s ease-in;
+
+  &:focus {
+    border-top-left-radius: pxtorem(0);
+    border-bottom-left-radius: pxtorem(0);
+  }
+}
+
+.clearBtn {
+  outline: none;
+  border: 1px solid $dark-teal;
+  color: $white;
+  border-top-right-radius: pxtorem(8);
+  border-bottom-right-radius: pxtorem(8);
+
+  background: $dark-teal;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 50%,
+    $teal 50%,
+    $teal
+  );
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all 0.2s ease-in;
+
+  &:hover {
+    background-position: 0 0;
+    border-top-right-radius: pxtorem(0);
+    border-bottom-right-radius: pxtorem(0);
+  }
+
+  &:focus {
+    background-position: 0 0;
+    border: 1px solid $dark-teal;
+    border-top-right-radius: pxtorem(0);
+    border-bottom-right-radius: pxtorem(0);
+  }
+}
+
+.tooltip {
+  margin-left: pxtorem(10);
+  color: $white;
+  padding: pxtorem(10);
+  border-radius: pxtorem(10);
+  position: relative;
+  display: inline-block;
+
+  background: $dark-teal;
+  background-image: linear-gradient(
+    to left,
+    transparent,
+    transparent 50%,
+    $teal 50%,
+    $teal
+  );
+  background-position: 100% 0;
+  background-size: 200% 100%;
+  transition: all 0.2s ease-in;
+
+  &__body {
+    visibility: hidden;
+    width: 120px;
+    background-color: $dark-teal;
+    color: #fff;
+    text-align: center;
+    padding-left: pxtorem(10);
+    padding-right: pxtorem(10);
+    padding-top: pxtorem(5);
+    padding-bottom: pxtorem(5);
+    @include border-radius(pxtorem(8));
+
+    /* Position of tooltip*/
+    position: absolute;
+    z-index: 1;
+    top: 120%;
+    left: -390%;
+
+    &__text {
+      &.-header {
+        font-weight: 700;
+        font-size: pxtorem(14);
+        border-bottom: solid pxtorem(1) $white;
+        margin-bottom: pxtorem(5);
+        padding-bottom: pxtorem(5);
+      }
+
+      &.-subheader {
+        font-weight: 500;
+        font-size: pxtorem(10);
+      }
+
+      &.-point {
+        font-weight: 700;
+        font-size: pxtorem(10);
+
+        &:not(:last-of-type) {
+          padding-bottom: pxtorem(5);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    background-position: 0 0;
+  }
+
+  &:hover .tooltip__body {
+    visibility: visible;
+  }
+
+  &:focus .tooltip__body {
+    visibility: visible;
+  }
+}

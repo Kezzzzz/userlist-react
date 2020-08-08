@@ -6,7 +6,7 @@ const TextValue = ({ label, value }) => {
   return (
     <div className={style.container}>
       <div className={style.label}>{label}</div>
-      <div>{value}</div>
+      <div className={style.value}>{value}</div>
     </div>
   )
 }

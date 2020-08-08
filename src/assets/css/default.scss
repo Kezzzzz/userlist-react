@@ -24,9 +24,12 @@ body {
   font-family: $font-family-base;
   width: 100vw;
   min-height: 100vh;
-  overflow: scroll;
   color: $charcoal-grey;
   background-color: $light-grey;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 h1 {

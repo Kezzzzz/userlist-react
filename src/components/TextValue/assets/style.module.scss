@@ -16,4 +16,30 @@
 .label {
   font-weight: 700;
   text-transform: uppercase;
+
+  @include breakpoint(0, $bs-sm) {
+    font-size: pxtorem(12);
+  }
+
+  @include breakpoint($bs-sm, $bs-lg) {
+    font-size: pxtorem(14);
+  }
+
+  @include breakpoint($bs-lg, 0) {
+    font-size: pxtorem(16);
+  }
+}
+
+.value {
+  @include breakpoint(0, $bs-sm) {
+    font-size: pxtorem(12);
+  }
+
+  @include breakpoint($bs-sm, $bs-lg) {
+    font-size: pxtorem(14);
+  }
+
+  @include breakpoint($bs-lg, 0) {
+    font-size: pxtorem(18);
+  }
 }

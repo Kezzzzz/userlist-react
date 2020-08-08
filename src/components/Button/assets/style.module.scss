@@ -12,7 +12,7 @@
   border: 0;
   @include border-radius(pxtorem(5));
 
-  background: $black;
+  background: $dark-teal;
   background-image: linear-gradient(
     to left,
     transparent,
@@ -24,7 +24,8 @@
   background-size: 200% 100%;
   transition: all 0.25s ease-in;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-position: 0 0;
   }
 }

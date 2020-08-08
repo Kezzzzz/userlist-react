@@ -5,8 +5,9 @@ It has the ability to search users by full name and email. You can utilise short
 ## Steps to run
 
 - Clone the repo
-- `npm i` to install dependencies
-- `npm start` to run the program in your browser
+- Navigate to the cartrack-react folder
+- Run `npm i` to install dependencies
+- Run `npm start` and the program will begin to load in your browser
 
 ### Built using
 

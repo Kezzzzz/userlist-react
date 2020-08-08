@@ -8,3 +8,8 @@ It has the ability to search users by full name and email. You can utilise short
 - `npm i` to install dependencies
 - `npm start` to run the program in your browser
 
+### Built using
+
+- NPM version 6.14.6
+- Node version 12.18.3
+

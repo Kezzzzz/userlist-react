@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ip = require('ip')
 
@@ -58,14 +57,6 @@ module.exports = {
               //Creates `style` nodes from JS strings
               'style-loader',
               MiniCssExtractPlugin.loader,
-              {
-                loader: 'string-replace-loader',
-                options: {
-                  search: '/src/assets/fonts',
-                  replace: 'fonts',
-                  flags: 'g',
-                },
-              },
               //Translate CSS into CommonJS
               {
                 loader: 'css-loader',
@@ -98,6 +89,7 @@ module.exports = {
       template: './public/index.html',
       favicon: './public/favicon.ico',
     }),
+    // extracts CSS into separate files.
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].[hash].css',

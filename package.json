@@ -1,5 +1,5 @@
 {
-  "name": "cartrack-react",
+  "name": "userlist-react",
   "version": "1.0.0",
   "description": "Displaying list of users using React.",
   "main": "app.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Kezzzzz/cartrack-react.git"
+    "url": "git+https://github.com/Kezzzzz/userlist-react.git"
   },
   "author": "Kieran Parish",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Kezzzzz/cartrack-react/issues"
+    "url": "https://github.com/Kezzzzz/userlist-react/issues"
   },
-  "homepage": "https://github.com/Kezzzzz/cartrack-react#readme",
+  "homepage": "https://github.com/Kezzzzz/userlist-react#readme",
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"

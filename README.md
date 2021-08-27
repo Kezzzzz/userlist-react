@@ -1,4 +1,4 @@
-# User List
+# User List [outdated packages]
 
 Displaying list of users using purely React and a few development dependencies.
 
@@ -6,7 +6,7 @@ Custom API hook.
 
 Modular SCSS.
 
-Manual babel + webpack setup.
+No CRA used.
 
 ## Steps to run
 
